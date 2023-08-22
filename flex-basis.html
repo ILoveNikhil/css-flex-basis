@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-wrap</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+
+        border: 2px solid white;
+      }
+      .container .left {
+        flex-basis: 19%;
+        background-color: red;
+        margin-right: 1%;
+      }
+      .container .mid {
+        flex-basis: 59%;
+        background-color: blueviolet;
+        margin-right: 1%;
+      }
+      .container .right {
+        flex-basis: 19%;
+        background-color: chocolate;
+        margin-right: 1%;
+      }
+      /* ---- tablet------- */
+      @media (max-width: 768px) and (min-height: 430px) {
+        .container .left {
+          flex-basis: 19%;
+        }
+        .container .mid {
+          flex-basis: 79%;
+        }
+        .container .right {
+          flex-basis: 0%;
+        }
+      }
+      /* ---- phone Number------- */
+
+      @media (max-width: 430px) {
+        .container .left {
+          flex-basis: 0%;
+        }
+        .container .mid {
+          flex-basis: 99%;
+        }
+        .container .right {
+          flex-basis: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left"></div>
+      <div class="mid"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>
